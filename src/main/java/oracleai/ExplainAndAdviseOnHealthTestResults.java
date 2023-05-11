@@ -95,7 +95,6 @@ public class ExplainAndAdviseOnHealthTestResults {
         } else {
             aiServiceVisionClient = new AIServiceVisionClient(InstancePrincipalsAuthenticationDetailsProvider.builder().build());
         }
-//        aiServiceVisionClient.setRegion(AIApplication.REGION);
         List<ImageFeature> features = new ArrayList<>();
         ImageFeature classifyFeature = ImageClassificationFeature.builder()
                 .maxResults(10)

@@ -110,7 +110,6 @@ public class WriteAStoryAboutAPictureAndGiveItsSentiments {
         } else {
             aiServiceVisionClient = new AIServiceVisionClient(InstancePrincipalsAuthenticationDetailsProvider.builder().build());
         }
-//        aiServiceVisionClient.setRegion(AIApplication.REGION);
         List<ImageFeature> features = new ArrayList<>();
         ImageFeature classifyFeature = ImageClassificationFeature.builder()
                 .maxResults(10)
@@ -336,7 +335,6 @@ public class WriteAStoryAboutAPictureAndGiveItsSentiments {
                 System.getenv("OCICONFIG_FILE"),System.getenv("OCICONFIG_PROFILE"));
         AIServiceLanguageClient languageClient =
                 AIServiceLanguageClient.builder().build(provider);
-//        languageClient.setRegion(AIApplication.REGION);
         DetectLanguageSentimentsDetails details =
                 DetectLanguageSentimentsDetails.builder()
                         .text(textcontent)
